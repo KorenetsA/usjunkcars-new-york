@@ -1,0 +1,29 @@
+.accordion-fag:not(:last-child) {
+  margin-bottom: 56px;
+}
+.accordion-fag .accordion__item {
+  background: #f1f3f8;
+  margin-bottom: 8px;
+  padding: 24px 0 24px 32px;
+}
+.accordion-fag .accordion__header {
+  font-size: 16px;
+  padding-right: 55px;
+  text-decoration: none;
+}
+.accordion-fag .accordion__header::after {
+  transition: transform 0.2s ease-out;
+  border: 0;
+  height: 14px;
+  width: 9px;
+  right: 30px;
+  background: url('../images/arrow-faq.svg') center center no-repeat;
+}
+.accordion-fag .accordion__content {
+  padding-right: 30px;
+}
+@media screen and (max-width: 767px) {
+  .accordion-fag:not(:last-child) {
+    margin-bottom: 48px;
+  }
+}

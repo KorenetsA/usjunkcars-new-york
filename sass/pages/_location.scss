@@ -1,0 +1,101 @@
+.place {
+  grid-gap: 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(calc(50% - 16px), 1fr));
+  position: relative;
+}
+.place__header {
+  align-items: center;
+  background: #f3f3f3;
+  border-radius: 3px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  padding: 17px 32px;
+  position: relative;
+  transition: all 0.3s;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.375;
+  color: $secondaryColor;
+}
+.place__header .place__header__icon {
+  margin-left: 16px;
+  transition: transform 0.3s;
+}
+.place__header.opened {
+  border-radius: 3px 3px 0 0;
+  padding-bottom: 25px;
+  border-bottom: 2px solid #e0e0e0;
+}
+.place__header.opened .place__header__icon {
+  -webkit-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+.place__body {
+  display: none;
+  left: 0;
+  overflow: auto;
+  position: relative;
+  width: calc(100vw);
+  max-width: 970px;
+}
+.place__item:nth-child(2n) .place__body {
+  left: calc(-100% - 16px);
+}
+.place__content {
+  background: #ececec;
+  border-radius: 0 3px 3px 3px;
+  padding: 24px 32px;
+}
+.place__item:nth-child(2n) .place__content {
+  border-radius: 3px 0 3px 3px;
+}
+.place_list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: -16px;
+}
+.place_list__item {
+  flex-basis: 25%;
+  padding-right: 10px;
+  margin-bottom: 16px;
+}
+.place_list__link {
+  font-weight: 600;
+  color: $primaryColor;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.place_list__link:hover {
+  color: $secondaryColor;
+}
+@media screen and (max-width: 1018px) {
+  .place__body {
+    width: calc(100vw - 48px);
+    max-width: inherit;
+  }
+}
+@media screen and (max-width: 639px) {
+  .place {
+    display: block;
+  }
+  .place__body {
+    width: 100%;
+  }
+  .place__item:nth-child(2n) .place__body {
+    left: 0;
+  }
+  .place__item {
+    margin-bottom: 8px;
+  }
+  .place_list__item {
+    flex-basis: 50%;
+    padding-right: 10px;
+  }
+  .place_list__item:nth-child(2n) {
+    text-align: right;
+    padding-left: 10px;
+  }
+}
