@@ -732,14 +732,14 @@ p:last-of-type {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 8px;
-  padding: 50px 15px 37px;
+  padding: 18px 15px 37px;
   -ms-flex-preferred-size: calc(20% - 16px);
       flex-basis: calc(20% - 16px);
   background-color: #ffffff;
 }
 
 .list_type__img {
-  height: 40px;
+  height: 96px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -749,7 +749,6 @@ p:last-of-type {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 25px;
 }
 
 .list_type__title {
@@ -1599,10 +1598,14 @@ p:last-of-type {
   .list_type__item {
     -ms-flex-preferred-size: calc(25% - 16px);
         flex-basis: calc(25% - 16px);
-    padding: 37px 15px 23px;
+    padding: 11px 15px 23px;
   }
   .list_type__img {
-    margin-bottom: 18px;
+    height: 84px;
+  }
+  .list_type__img img {
+    top: 5px;
+    position: relative;
   }
   .list_brands__item {
     -ms-flex-preferred-size: calc(12.5% - 10px);
